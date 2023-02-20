@@ -1,40 +1,27 @@
 #include <stdio.h>
-#include <stdbool.h>>
 
 int main()
 {
 
-    // variable = allocated space in memory to store a value.
-    //            can access the stored value in memory
-    //            * need to declare the type of them/
+    // format specifier %
 
-    int x;       // declaration
-    x = 123;     // initialization
-    int y = 321; // declaration + initialization
+    // %c = char
+    // %s = string || char[]
+    // %f = float
+    // %lf = double
+    // %d = integer
 
-    char grade = 'C';      // single character || %c
-    char a = 120;          // 1 byte char (-128 - +127) || %d or %c
-    unsigned char b = 255; // 1 byte char (0 - +255) || %d or %c
-    char name[] = "Bro";   // array of characters || %s
+    // %.1 = decimal precision
+    // %1 = minimum field width
+    // %- = left align
 
-    bool c = true; // <stdbool.h> 1 byte true or false || %d
+    float item1 = 5.75;
+    float item2 = 10.00;
+    float item3 = 100.99;
 
-    short int d = 21;          // 2 bytes integer (-32.768 - +32.768) || %d
-    unsigned short int e = 21; // 2 bytes integer (0 - +65.535) || %d
-
-    int age = 21;        // 4 bytes integer (-2.147.483.648 - +2.147.483.648) || %d
-    unsigned int f = 21; // 4 bytes integer (0 - +4.294.967.295) || %u
-
-    long long int g = 1;          // 8 bytes integer (-9 quintillion - +9 quintillion) || %lld
-    unsigned long long int h = 1; // 8 bytes integer (0 - +18 quintillion) || %llu
-
-    float gpa = 2.0504030;        // 4 bytes floating point number (6 - 7)|| %0.<n>f - number of digits after "."
-    double i = 2.054321234567890; // 8 bytes double numbers (15 - 16) || %0.<n>lf - number of digits after "."
-
-    printf("Hello %s", name);
-    printf("\nYou are %d years old", age);
-    printf("\nYour averge grade is %c", grade);
-    printf("\nYour gpa is %2f", gpa);
+    printf("Item 1: $%.2f", item1);
+    printf("\nItem 2: $%.2f", item2);
+    printf("\nItem 3: $%.2f", item3);
 
     return 0;
 }
