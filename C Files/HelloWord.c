@@ -4,19 +4,19 @@
 int main()
 {
 
-    const double PI = 3.14159;
-    double radius;
-    double circumference;
-    double area;
+    double A;
+    double B;
+    double C;
 
-    printf("\nEnter the radius of a circle\n>> ");
-    scanf("%lf", &radius);
+    printf("Enter side A\n>> ");
+    scanf("%lf", &A);
 
-    circumference = 2 * PI * radius;
-    area = PI * radius * radius;
+    printf("\nEnter side B\n>> ");
+    scanf("%lf", &B);
 
-    printf("\nCircumference: %.2lf", circumference);
-    printf("\nArea: %.2lf", area);
+    C = sqrt(A * A + B * B);
+
+    printf("\nSide C: %lf", C);
 
     return 0;
 }
