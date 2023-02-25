@@ -1,22 +1,29 @@
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
 
-    double A;
-    double B;
-    double C;
+    int age;
 
-    printf("Enter side A\n>> ");
-    scanf("%lf", &A);
+    printf("\nEnter your age\n>> ");
+    scanf("%d", &age);
 
-    printf("\nEnter side B\n>> ");
-    scanf("%lf", &B);
-
-    C = sqrt(A * A + B * B);
-
-    printf("\nSide C: %lf", C);
+    if (age >= 18)
+    {
+        printf("\nYou are now signed up!");
+    }
+    else if (age == 0)
+    {
+        printf("You can't sign up! You were just born!");
+    }
+    else if (age < 0)
+    {
+        printf("You haven't been born yet!");
+    }
+    else
+    {
+        printf("\nYou are too young to sign up!");
+    }
 
     return 0;
 }
