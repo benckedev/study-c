@@ -1,33 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
 
-    // augmented assignment operatos =
-    // used to replace a statement where an operator
-    // takes a variable as onde of its arguments
-    // and then assigns the result back to the same variable
-    // x = x +1/
-    // x+=1;
+    char name[25]; // bytes
+    int age;
 
-    int x = 10;
+    printf("Whats's your name?\n>> ");
+    // scanf("%s", &name);
+    fgets(name, 25, stdin);
+    name[strlen(name) - 1] = '\0';
 
-    // x = x + 2;
-    // x+= 2;
+    printf("How old are you?\n>> ");
+    scanf("%d", &age);
 
-    // x = x - 3;
-    // x-+3;
-
-    // x = x * 4;
-    // x*= 4;
-
-    // x = x / 5;
-    // x/= 5;
-
-    // x = x % 2;
-    // x%= 2;
-
-    printf("%d", x);
+    printf("  Hello %s", name);
+    printf("\n  You are %d years old", age);
 
     return 0;
 }
