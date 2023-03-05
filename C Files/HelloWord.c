@@ -3,26 +3,33 @@
 int main()
 {
 
-    int age;
+    // switch = a more efficient alternative to using many "else if" statements
+    // allows a value to be tested for equality against many case
 
-    printf("\nEnter your age\n>> ");
-    scanf("%d", &age);
+    char grade;
 
-    if (age >= 18)
+    printf("\nEnter a letter grade: ");
+    scanf("%c", &grade);
+
+    switch (grade)
     {
-        printf("\nYou are now signed up!");
-    }
-    else if (age == 0)
-    {
-        printf("You can't sign up! You were just born!");
-    }
-    else if (age < 0)
-    {
-        printf("You haven't been born yet!");
-    }
-    else
-    {
-        printf("\nYou are too young to sign up!");
+    case 'A':
+        printf("\nperfect!(%c)", grade);
+        break;
+    case 'B':
+        printf("\nYou did good! (%c)", grade);
+        break;
+    case 'C':
+        printf("\nYou did okay! (%c)", grade);
+        break;
+    case 'D':
+        printf("\nAt least it's not an F! (%c)", grade);
+        break;
+    case 'F':
+        printf("\nYOU FAILED(%c)", grade);
+        break;
+    default:
+        printf("\nPlease enter only valid grade.");
     }
 
     return 0;
