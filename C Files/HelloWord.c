@@ -1,36 +1,44 @@
 #include <stdio.h>
-#include <ctype.h>
-
 int main()
 {
 
-    char unit;
-    float temp;
+    char operator;
+    double num1;
+    double num2;
+    double result;
 
-    printf("\nIs the temperatur in (F) or (C)?\n>> ");
-    scanf("%c", &unit);
+    printf("\nEnter an operator (+ - * /)\n>> ");
+    scanf("%c", &operator);
 
-    unit = toupper(unit);
+    printf("\nEnter number 1\n>> ");
+    scanf("%lf", &num1);
 
-    if (unit == 'C')
+    printf("\nEnter number 2\n>> ");
+    scanf("%lf", &num2);
+
+    switch (operator)
     {
-        printf("\nEnter the temp in Celsius\n>> ");
-        scanf("%f", &temp);
+    case '+':
+        result = num1 + num2;
+        printf("\nResult: %.2lf", result);
+        break;
+    case '-':
+        result = num1 - num2;
+        printf("\nResult: %.2lf", result);
+        break;
+    case '*':
+        result = num1 * num2;
+        printf("\nResult: %.2lf", result);
+        break;
+    case '/':
+        result = num1 / num2;
+        printf("\nResult: %.2lf", result);
+        break;
 
-        temp = (temp * 9 / 5) + 32;
-        printf("\nThe temp in Farenheit is %.2f", temp);
+    default:
+        printf("\n%c is not valid!", operator);
+        break;
     }
-    else if (unit == 'F')
-    {
-        printf("\nEnter the temp in Farenheit\n>> ");
-        scanf("%f", &temp);
 
-        temp = ((temp - 32) * 5) / 9;
-        printf("\nThe temp in Celsius is %.2f", temp);
-    }
-    else
-    {
-        printf("\n%c is not a valid unit of measurement", unit);
-    }
     return 0;
 }
