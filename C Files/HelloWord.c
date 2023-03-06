@@ -1,43 +1,20 @@
 #include <stdio.h>
+#include <stdbool.h>
 int main()
 {
 
-    char operator;
-    double num1;
-    double num2;
-    double result;
+    // logical operators = && (and) checks if two conditions are true
 
-    printf("\nEnter an operator (+ - * /)\n>> ");
-    scanf("%c", &operator);
+    float temp = 15;
+    bool sunny = false;
 
-    printf("\nEnter number 1\n>> ");
-    scanf("%lf", &num1);
-
-    printf("\nEnter number 2\n>> ");
-    scanf("%lf", &num2);
-
-    switch (operator)
+    if (temp >= 0 && temp <= 30 && sunny)
     {
-    case '+':
-        result = num1 + num2;
-        printf("\nResult: %.2lf", result);
-        break;
-    case '-':
-        result = num1 - num2;
-        printf("\nResult: %.2lf", result);
-        break;
-    case '*':
-        result = num1 * num2;
-        printf("\nResult: %.2lf", result);
-        break;
-    case '/':
-        result = num1 / num2;
-        printf("\nResult: %.2lf", result);
-        break;
-
-    default:
-        printf("\n%c is not valid!", operator);
-        break;
+        printf("\nThe weather is good!");
+    }
+    else
+    {
+        printf("\nThe weather is bad!");
     }
 
     return 0;
